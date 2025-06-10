@@ -37,7 +37,7 @@
     </nav>
     <section id="profile">
         <div class="section__pic-container">
-            <img src="./Assets/profile-pic.png" alt="PlaceHolder profile image">
+            <img src="./Assets/about-pic.png" alt="PlaceHolder profile image">
         </div>
         <div class="section__text">
               <p class="section__text__p1">Hello I'm</p>
@@ -49,7 +49,7 @@
               </div>
               <div id="socials-container">
                 <img src="./Assets/linkedin.png" alt="My Linkedin Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/tim-macdonald-056b78180/'">
-                <img src="./Assets/github.png" alt="My github Profile" class="icon" onclick="location.href='https://github.com/CodeByTM'">
+                <img src="./Assets/github.png" alt="My github Profile"  class="icon" onclick="location.href='https://github.com/CodeByTM'">
 
               </div>
         </div>
@@ -59,16 +59,16 @@
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./Assets/about-pic.png" alt="Profile Picture" class="about-pic">
+                <img src="./Assets/profile-pic.png" alt="Profile Picture" class="about-pic">
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
-                    <div class="details-container">
+                    <div class="details-container cloud">
                         <img src="./Assets/experience.png" alt="experience icon" class="icon">
                         <h3>Experience</h3>
-                        <p>2+ years <br> Software Development</p>
+                        <p>2+ Years <br> Software Development</p>
                     </div>
-                    <div class="details-container">
+                    <div class="details-container cloud">
                         <img src="./Assets/education.png" alt="education icon" class="icon">
                         <h3>Education</h3>
                         <p>Advanced Diploma<br> Computer Engineering</p>
@@ -171,6 +171,7 @@
                         </article>
                     </div>
                 </div>
+                
             </div>
         </div>
         <img src="./Assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#projects'">
@@ -184,12 +185,12 @@
                 <div class="article-container">
                     <img src="./Assets/project-1.png" alt="Project 1" class="project-img">
                 </div>
-                <h2 class="experience-sub-title project-title">Project One</h2>
+                <h2 class="experience-sub-title project-title">SmartSpot</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/CodeByTM/Smart-Spot-Project'">
                         Github
                     </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                    <button class="btn btn-color-2 project-btn" onclick="showVideo()">
                         Live Demo
                     </button>
                 </div>
@@ -240,6 +241,17 @@
             </div>
         </div>
     </section>
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+    <div class="video-wrapper">
+        <button class="close-button" onclick="closeVideo()">×</button>
+        <video id="demoVideo" controls>
+        <source src="./Assets/demo-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+    </div>
+
     <footer>
         <nav>
             <div class="nav-links-container">
