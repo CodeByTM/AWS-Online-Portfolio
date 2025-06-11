@@ -12,7 +12,9 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: lightblue;
+    margin: 0;
+    color: #222;
+    background-color:#ceecff;
 }
 
 html {
@@ -155,10 +157,11 @@ a:hover{
 section{
     padding-top: 4vh;
     height:96vh;
-    margin: 0 10rem;
+    margin: 0 5%;
     box-sizing: border-box;
     min-height: fit-content;
 }
+
 
 .section-container{
     display: flex;
@@ -178,6 +181,18 @@ section{
     height: 400px;
     width: 400px;
     margin: auto 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__pic-container img{
+    width: 400px;               /* increase size as needed */
+    height: 400px;
+    object-fit: cover;          /* keeps image from stretching */
+    object-position: center 30%;
+    border-radius: 50%;         /* makes it a circle */
+    border: 4px solid #00bfff;  /* adjust color and thickness */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* optional for a soft glow */
 }
 
 .section__text {
@@ -318,7 +333,9 @@ section{
     height: 400px;
     width: 400px;
     margin: auto 0;
+    padding-left: 30px;
 }
+
 
 /* Experience section  */
 
@@ -341,22 +358,30 @@ section{
 
 .article-container {
     display: flex;
-    text-align: initial;
     flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-article{
+
+article {
     display: flex;
+    flex-direction: column; /* come back and change to rows */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
     width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+    min-height: 100px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
+
 
 article.icon {
     cursor: default;
+    width: 24px;
+    height: 24px;
 }
 
 
@@ -444,87 +469,88 @@ footer p {
 /* Pop-up Video */
 
 .video-modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
 }
 
 .video-wrapper {
-  position: relative;
-  width: 90%;
-  max-width: 720px; /*  Keeps video from being too large */
-  background-color: black;
-  padding: 1rem;
-  border-radius: 10px;
+    position: relative;
+    width: 90%;
+    max-width: 720px; 
+    background-color: black;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .video-wrapper video {
-  width: 100%;   /*  Makes it responsive inside the wrapper */
-  height: auto;  /*  Prevents stretching or zooming */
-  display: block;
-  border-radius: 8px;
-}
+    width: 100%;   
+    height: auto;  
+    display: block;
+    border-radius: 8px;
+    }
 
 .close-button {
-  position: absolute;
-  top: -40px;
-  right: -10px;
-  background: none;
-  border: none;
-  font-size: 36px;
-  color: white;
-  cursor: pointer;
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    background: none;
+    border: none;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
 }
 
 
 /*  cloud transformations */
 .cloud {
-   display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center;     /* horizontal centering */
-  text-align: center;      /* center text inside */
-  padding: 20px;           /* optional, to keep spacing */
-  box-sizing: border-box;
-  height: 180px; /* control the size */
-  aspect-ratio: 1.8;
-  --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
-  mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%, var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%, linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
-  background: #ffffff;
-
-  box-shadow:
-    0 8px 15px rgba(0, 0, 0, 0.15),  /* soft shadow inside */
-    inset 0 0 20px rgba(0, 0, 0, 0.05);
-
-  filter: drop-shadow(0 4px 3px rgba(0,0,0,0.1));
-
-  animation: floatCloud 6s ease-in-out infinite;
-  position: relative;
-  width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical centering */
+    align-items: center;     /* horizontal centering */
+    text-align: center;      /* center text inside */
+    padding: 20px;           /* optional, to keep spacing */
+    box-sizing: border-box;
+    height: 180px; /* control the size */
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%, var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%, linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #ffffff;
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.15),  /* soft shadow inside */
+        inset 0 0 20px rgba(0, 0, 0, 0.05);
+    filter: drop-shadow(0 4px 3px rgba(0,0,0,0.1));
+    animation: floatCloud 6s ease-in-out infinite;
+    position: relative;
+    width: 320px;
 }
 
 /* Shadow underneath the cloud */
 .cloud::after {
-  content: '';
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;
-  height: 25px;
-  background: rgba(0,0,0,0.1);
-  border-radius: 50%;
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 25px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: 0.6;
+    pointer-events: none; /* so it doesn’t interfere with interactions */
+    animation: floatShadow 6s ease-in-out infinite;
 }
 
 .cloud > * {
-  margin: 8px 0;
+    margin: 8px 0;
 }
 
 /* Float animation for cloud */
