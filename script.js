@@ -31,7 +31,7 @@ function showVideo() {
 
   // Create the source
   const source = document.createElement("source");
-  source.src = "./Assets/SmartSpot_final.mp4"; // <-- Update with your actual path
+  source.src = "SmartSpot_final.mp4"; // <-- Update with actual path
   source.type = "video/mp4";
 
   // Assemble the video
@@ -51,3 +51,6 @@ function closeVideo() {
     modal.remove(); // Completely remove the modal and video from DOM
   }
 }
+
+
+
