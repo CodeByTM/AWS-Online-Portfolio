@@ -58,14 +58,8 @@ const functionUrl = "https://dh3kjmwmwxein3frnbejtm6xt40rmtiv.lambda-url.us-east
 
 async function updateAndFetchViewCount() {
   try {
-    // Send a POST request to increment and get updated count
-    const response = await fetch(functionUrl, {
-      method: "POST"
-    });
-
+    const response = await fetch(functionUrl); // GET by default
     const data = await response.json();
-
-    // Update the view count text
     document.getElementById("viewCount").innerText = data.views;
   } catch (error) {
     console.error("Error fetching view count:", error);
@@ -73,7 +67,7 @@ async function updateAndFetchViewCount() {
   }
 }
 
-// Run when the page loads
 window.addEventListener("DOMContentLoaded", updateAndFetchViewCount);
+
 
 }
