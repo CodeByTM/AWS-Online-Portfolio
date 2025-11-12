@@ -68,6 +68,6 @@ async function updateAndFetchViewCount() {
 }
 
 window.addEventListener("DOMContentLoaded", updateAndFetchViewCount);
-
-
 }
+
+getVisitorCount();
