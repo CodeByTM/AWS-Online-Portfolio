@@ -177,18 +177,23 @@ section{
     height: 80vh;
 }
 
+
 .section__pic-container{
     display: flex;
     height: 400px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
     margin: auto 0;
     justify-content: center;
     align-items: center;
+    padding: 0.25rem;
+    box-sizing:border-box
 }
 
 .section__pic-container img{
-    width: 400px;               /* increase size as needed */
-    height: 400px;
+    width: 100%;               /* increase size as needed */
+    height: 100%;
     object-fit: cover;          /* keeps image from stretching */
     object-position: center 30%;
     border-radius: 50%;         /* makes it a circle */
@@ -527,6 +532,9 @@ footer p {
     position: relative;
     width: 320px;
 }
+
+
+
 
 /* Shadow underneath the cloud */
 .cloud::after {
