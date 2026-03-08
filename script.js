@@ -54,7 +54,7 @@ function closeVideo() {
 
 function getVisitorCount(){
 
-const functionUrl = "YOUR_FUNCTION_URL_HERE";
+const functionUrl = "https://dh3kjmwmwxein3frnbejtm6xt40rmtiv.lambda-url.us-east-1.on.aws/";
 
 async function updateAndFetchViewCount() {
   try {
